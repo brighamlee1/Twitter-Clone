@@ -32,6 +32,7 @@ app.use(
   })
 );
 
+
 let sessionLog = (req, res, next) => {
   console.log(req.session);
   next();
