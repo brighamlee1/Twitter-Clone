@@ -19,11 +19,12 @@ Technologies Used: Mongoose | MongoDB | Express | Ejs | NodeJS | CSS
 
 Getting Started:
 
-Click on this link to launch the application: https://twitter-clone-321.herokuapp.com/home
+Click on this link to launch the application: https://twitter-mock-321.herokuapp.com/
+
 
 1. You will be prompted to log in with your account
-
    - If you dont have an account, click register to create an account with an email, username, and password
+   - (if you don't want to register, login with the email: guest@gmail.com and password: abc123)
    - your email will be safely stored in a database and your password will be encrypted
 
 2. Once you are logged in you will see the main twitter feed with all of the other users tweets
@@ -31,16 +32,15 @@ Click on this link to launch the application: https://twitter-clone-321.herokuap
 3. Users can scroll down and explore what people are saying
 
 4. Users can also post tweets to the feed by typing into the main text box at the top of the page and clicking the blue 'tweet' button
+   - Users can also add images to their tweets below the text box
 
-   -Users can also add images to their tweets below the text box
+5. From the home page, Users can click directly on a tweet to display it and comment on it
 
-5. From the home page, Users can click directly on a tweet to display it and comment on it anonymously
+6. To return to the home page, click the home or twitter button on the side-bar
 
-6. To return to the home page, click the home button on the side-bar
+7. From the home page, Users can click on the profile button to display their own profile and edit their username and/or profile picture.
 
-7. From the home page, Users can click on the profile button to display their own profile and edit the username and/or profile picture.
-
-8. Once you are done using Twitter-Clone, click logout in the upper right corner and your session will end
+8. Once you are done using Twitter-Mock, click the logout icon and your session will end
 
 Next Steps / IceBox Items:
 
