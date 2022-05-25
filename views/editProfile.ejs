@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('partials/head.ejs',{ pageName : "Edit Profile" }) %>
-  <%- include('./partials/nav.ejs', {page: 'nav' }) %>
-
     <body class="home-body">
       <div class="editProifle-body profile">
         <div>
@@ -36,11 +34,6 @@
               <p class="control">
               </p>
             </div>
-          </form>
-          <form action="/auth/<%= id %>?_method=DELETE" method="POST">
-            <form action="/home/<%= id %>?_method=DELETE" method="POST">
-              <input class="button is-danger" type="submit" value="	Delete Profile" />
-            </form>
           </form>
         </div>
       </div>

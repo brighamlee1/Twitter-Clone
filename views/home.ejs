@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('partials/head.ejs',{ pageName : "Twitter home" }) %>
-  <%- include('./partials/nav.ejs', {page: 'nav' }) %>
-    <body class="home-body">
+
+  <body class="home-body">
+    <section class="bg-color">
       <div class="homeMainContent anything">
         <div>
           <%- include('partials/sideNavBar.ejs')%>
@@ -51,7 +52,7 @@
                         </div>
                       </a>
                       <div class="home-like-retweet-buttons">
-                        <div>
+                        <!-- <div>
                           <button class="comment-button openModal">
                             <i class="fa-solid fa-comment"></i>
                           </button>
@@ -66,7 +67,7 @@
                           <span class="number-retweets">
                             <%= tweet.retweets %>
                           </span>
-                        </div>
+                        </div> -->
                       </div>
                     </section>
                     <% } %>
@@ -76,21 +77,23 @@
       </main>
       </main>
       </div>
-      <script>
+    </section>
+    <script>
 
-        // Function to make textarea automatically adjust when user is typing
-        const text = document.getElementsByTagName("textarea");
-        for (let i = 0; i < text.length; i++) {
-          text[i].setAttribute("style", "height:" + (text[i].scrollHeight) + "px;overflow-y:hidden;");
-          text[i].addEventListener("input", OnInput, false);
-        }
+      // Function to make textarea automatically adjust when user is typing
+      const text = document.getElementsByTagName("textarea");
+      for (let i = 0; i < text.length; i++) {
+        text[i].setAttribute("style", "height:" + (text[i].scrollHeight) + "px;overflow-y:hidden;");
+        text[i].addEventListener("input", OnInput, false);
+      }
 
-        function OnInput() {
-          this.style.height = "auto";
-          this.style.height = (this.scrollHeight) + "px";
-        }
+      function OnInput() {
+        this.style.height = "auto";
+        this.style.height = (this.scrollHeight) + "px";
+      }
 
-      </script>
-    </body>
+    </script>
+
+  </body>
 
 </html>

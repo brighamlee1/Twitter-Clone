@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html class="show-html" lang="en">
 <%- include('partials/head.ejs', { pageName: 'Tweet Page' }) %>
-  <%- include('./partials/nav.ejs', {page: 'nav' }) %>
-    <body class="show-page">
-      <section class="show-content">
-        <div>
-          <%- include('partials/sideNavBar.ejs')%>
-        </div>
-        <body class="home-body">
-          <div class="tweet-container">
-            <div class="tweetPic-user">
-              <img class="profile-image" src="<%=oneTweet.user.profilePic%>" />
-              <p class="username">
-                @<%=oneTweet.user.username%>
-              </p>
-              <span> | </span>
-              <small>
-                <%= new Date(oneTweet.createdAt).toLocaleString() %>
-              </small>
-            </div>
-            <p class="tweet-text">
-              <%= oneTweet.content %>
+
+  <body class="show-page">
+    <section class="show-content">
+      <div>
+        <%- include('partials/sideNavBar.ejs')%>
+      </div>
+
+      <body class="home-body">
+        <div class="tweet-container">
+          <div class="tweetPic-user">
+            <img class="profile-image" src="<%=oneTweet.user.profilePic%>" />
+            <p class="username">
+              @<%=oneTweet.user.username%>
             </p>
-            <div class="image-container">
-              <% if(oneTweet.image !=='' ){%>
-                <img class="card-image" src="<%=oneTweet.image%>" />
-                <%}%>
-            </div>
-            <div class="like-retweet-buttons">
-              <div>
+            <span> | </span>
+            <small>
+              <%= new Date(oneTweet.createdAt).toLocaleString() %>
+            </small>
+          </div>
+          <p class="tweet-text">
+            <%= oneTweet.content %>
+          </p>
+          <div class="image-container">
+            <% if(oneTweet.image !=='' ){%>
+              <img class="card-image" src="<%=oneTweet.image%>" />
+              <%}%>
+          </div>
+          <div class="like-retweet-buttons">
+            <!-- <div>
                 <button class="comment-button"><i class="fa-solid fa-comment"></i></button>
               </div>
               <% oneTweet.likes=0 %>
@@ -43,55 +44,63 @@
                   <span class="number-retweets">
                     <%= oneTweet.retweets %>
                   </span>
-                </div>
+                </div> -->
+          </div>
+          <form method="POST" action="/home/<%=oneTweet._id%>">
+            <div class="show-tweet-text-container">
+              <label for="content">
+                <img class="profile-image" src="<%=currentUser.profilePic%>" />
+              </label>
+              <textarea name="content" id="show-content" placeholder="Tweet your comment"></textarea>
             </div>
-            <form method="POST" action="/home/<%=oneTweet._id%>">
-              <div class="show-tweet-text-container">
-                <label for="content">
-                  <img class="profile-image" src="<%=currentUser.profilePic%>" />
-                </label>
-                <textarea name="content" id="show-content" placeholder="Tweet your comment"></textarea>
-              </div>
-              <div class="comment-button-container">
-                <input type="submit" value="Comment" class="commentButton" />
-              </div>
-            </form>
-            <form method="POST"action="/home/<%=oneTweet._id%>?_method=DELETE">
+            <div class="comment-button-container">
+              <input type="submit" value="Comment" class="commentButton" />
+            </div>
+          </form>
+          <!-- <form method="POST"action="/home/<%=oneTweet._id%>?_method=DELETE">
               <input type="submit" value="delete tweet" />
 
-            </form>
-            <h3 class="comment-title">Comments</h3>
-            <% for (let i=0; i< comments.length; i++) { %>
-              <div class="commentarea">
-                <p>
-                  <% if (comments[i] !=="") { %>
-                    <label for="content">
-                      <img class="profile-image" src="<%=commentpicture[i]%>" />
-                    </label>
-                    @<%=commentusername[i]%>: 
+            </form> -->
+          <h3 class="comment-title">Comments</h3>
+          <% for (let i=0; i< comments.length; i++) { %>
+            <div class="commentarea">
+                <% if (comments[i] !=="" ) { %>
+                  <div class="show-tweetPic-user">
+                    <img class="profile-image" src="<%=commentpicture[i]%>" />
+                    <p class="username">
+                      @<%=commentusername[i]%>
+                    </p>
+                    <span> | </span>
+                    <small>
+                      <%= new Date(oneTweet.createdAt).toLocaleString() %>
+                    </small>
+                  </div>
+                  <div>
+                    <p class="comment-content">
                       <%= comments[i] %>
-               <%   } %>
-                  
-                </p>
-              </div>
-              <%}%>
+                    </p>
+                  </div>
 
-          </div>
-          </div>
-      </section>
-      <script>
-        // Function to make textarea automatically adjust when user is typing
-        const text = document.getElementsByTagName("textarea");
-        for (let i = 0; i < text.length; i++) {
-          text[i].setAttribute("style", "height:" + (text[i].scrollHeight) + "px;overflow-y:hidden;");
-          text[i].addEventListener("input", OnInput, false);
-        }
+                  <% } %>
+            </div>
+            <%}%>
 
-        function OnInput() {
-          this.style.height = "auto";
-          this.style.height = (this.scrollHeight) + "px";
-        }
-      </script>
-    </body>
+        </div>
+        </div>
+    </section>
+    <script>
+      // Function to make textarea automatically adjust when user is typing
+      const text = document.getElementsByTagName("textarea");
+      for (let i = 0; i < text.length; i++) {
+        text[i].setAttribute("style", "height:" + (text[i].scrollHeight) + "px;overflow-y:hidden;");
+        text[i].addEventListener("input", OnInput, false);
+      }
+
+      function OnInput() {
+        this.style.height = "auto";
+        this.style.height = (this.scrollHeight) + "px";
+      }
+    </script>
+  </body>
 
 </html>

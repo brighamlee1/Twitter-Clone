@@ -1,6 +1,10 @@
-/* Setting every page's default background to black */
+/* Setting every page's default background to rgb(15, 15, 15) */
+html {
+  background-color: rgb(15, 15, 15);
+}
+
 body {
-  background-color: black;
+  background-color: rgb(15, 15, 15);
 }
 
 /* Side Navbar styling */
@@ -30,9 +34,15 @@ body {
 
 /* Home page styling */
 .home-body {
-  background-color: black;
+  background-color: rgb(15, 15, 15);
   color: white;
   font-family: "Roboto", sans-serif;
+  height: 100%;
+}
+
+.bg-color {
+  background-color: rgb(15, 15, 15);
+  height: 100%;
 }
 
 #title {
@@ -48,7 +58,7 @@ body {
 }
 
 .homeMainContent {
-  background-color: black;
+  background-color: rgb(15, 15, 15);
   display: grid;
   grid-template-columns: 100px 600px;
   justify-content: center;
@@ -59,10 +69,12 @@ body {
   width: 600px;
   border-left: 1px solid rgb(70, 70, 70);
   border-right: 1px solid rgb(70, 70, 70);
+  height: 100%;
+  background-color: rgb(15, 15, 15);
 }
 
 .card-image {
-  width: 370px;
+  width: 265px;
   height: 300px;
   border-radius: 6%;
 }
@@ -71,9 +83,9 @@ body {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   color: white;
-  background-color: black;
+  background-color: rgb(15, 15, 15);
   border: none;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid rgb(15, 15, 15);
   width: 450px;
   font-size: 26px;
   padding: 20px 2px 20px 0;
@@ -122,9 +134,9 @@ body {
 }
 
 .image-input {
-  background-color: black;
+  background-color: rgb(15, 15, 15);
   border: none;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid rgb(15, 15, 15);
   color: white;
   font-size: 16px;
   margin-right: auto;
@@ -153,10 +165,9 @@ body {
 
 .image-container {
   display: flex;
-  justify-content: flex-end;
-  margin: 10px 110px 10px 0;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .tweet-text {
@@ -179,7 +190,7 @@ body {
 }
 
 .tweetPic-user small {
-  margin-left: 10px;
+  margin-left: 9px;
 }
 
 .home-like-retweet-buttons {

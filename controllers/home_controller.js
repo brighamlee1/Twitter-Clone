@@ -16,29 +16,18 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-router.get("/bookmarks", async (req, res, next) => {
-  try {
-    const tweets = await db.Tweet.find({}).populate("user");
-    const currentUser = req.session.currentUser;
-    const context = { tweets, currentUser };
-    return res.render("bookmarks.ejs", context);
-  } catch (error) {
-    console.log(error);
-    req.error = error;
-    return next();
-  }
-});
-
 // Future route for comments
 
 router.get("/:id", async (req, res, next) => {
   try {
     const tweet = await db.Tweet.findById(req.params.id).populate("user");
+    const comment = await db.Comment.findById(req.params.id).populate('user');
     const currentUser = req.session.currentUser;
     const comments = tweet.comment;
     const commentusername = tweet.commentusername;
     const commentpicture = tweet.commentpicture;
     const context = {
+      comment,
       oneTweet: tweet,
       currentUser,
       comments,
@@ -101,18 +90,6 @@ router.post("/:id", async (req, res, next) => {
     console.log(newComment._id);
 
     res.redirect(`/home/${req.params.id}`);
-  } catch (error) {
-    console.log(error);
-    req.error = error;
-    return next();
-  }
-});
-
-router.delete("/:id", async (req, res, next) => {
-  try {
-    const deletedTweets = await db.Tweet.findByIdAndDelete(req.params.id);
-    console.log(deletedTweets);
-    return res.redirect("/home");
   } catch (error) {
     console.log(error);
     req.error = error;

@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { User } = require(".");
 
 const tweetSchema = new mongoose.Schema(
   {
@@ -31,7 +32,6 @@ const tweetSchema = new mongoose.Schema(
     },
     commentpicture: {
       type: [String],
-      default:""
     }
   },
   {

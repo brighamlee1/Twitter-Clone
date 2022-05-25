@@ -6,11 +6,11 @@
   font-family: "Roboto", sans-serif;
   margin-top: 0;
   padding-top: 0;
-  background-color: black;
+  background-color: rgb(15, 15, 15);
 }
 
 .profile {
-  background-color: black;
+  background-color: rgb(15, 15, 15);
   display: grid;
   grid-template-columns: 100px 600px;
   justify-content: center;
@@ -141,18 +141,18 @@
 
 /* Styling login and register page */
 .hero-body {
-  background-color: black;
+  background-color: rgb(15, 15, 15);
 }
 
 .text {
-  background-color: black;
+  background-color: rgb(15, 15, 15);
   font-size: 22px;
   margin-bottom: 30px;
   text-align: center;
 }
 
 #black {
-  background-color: black;
+  background-color: rgb(15, 15, 15);
 }
 
 .control button {

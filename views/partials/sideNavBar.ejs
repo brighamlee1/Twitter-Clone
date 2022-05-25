@@ -11,19 +11,11 @@
         ><i class="fa-solid fa-arrow-right-from-bracket"></i
       ></a>
     </li>
-    <li class="bookMarkIcon">
-      <a href="/home/bookmarks"
-        ><i class="fa-regular fa-bookmark" title="Likes"></i
-      ></a>
-    </li>
     <% const user=currentUser%>
     <li class="profileIcon">
       <a href="/auth/<%= user.id %>/editprofile"
         ><i class="fa-regular fa-user" title="Profile"></i
       ></a>
-    </li>
-    <li class="tweetIcon">
-      <a title="Tweet" href="/home"><i class="fa-solid fa-circle-plus"></i></a>
     </li>
   </ul>
 </nav>
