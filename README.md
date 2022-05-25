@@ -6,14 +6,15 @@ Twitter-Clone is a back-end based project aimed at reverse-engineering the popul
 
 Screenshots:
 
-![Screen Shot 2022-05-02 at 8 09 38 PM](https://user-images.githubusercontent.com/100104797/166345302-1a0408ca-9bbc-40d2-9fe0-f686a95653ba.png)
+![Screen Shot 2022-05-25 at 8 44 14 AM](https://user-images.githubusercontent.com/91819733/170277222-b5928e16-5f0d-4cd0-8954-2c9bc7ec4313.png)
 
-![Screen Shot 2022-05-02 at 8 10 55 PM](https://user-images.githubusercontent.com/100104797/166345343-db5c06a1-1cdd-4fd7-b476-39a7bad66b49.png)
+![Screen Shot 2022-05-25 at 8 44 00 AM](https://user-images.githubusercontent.com/91819733/170277248-39edef3c-95c7-4f9d-b981-14c5c4a5f095.png)
 
-![Screen Shot 2022-05-02 at 8 11 28 PM](https://user-images.githubusercontent.com/100104797/166345375-ee63cb0c-9f66-49ff-adb4-e43cc49178e1.png)
+![Screen Shot 2022-05-25 at 8 43 11 AM](https://user-images.githubusercontent.com/91819733/170277299-de38efa6-acfb-4c8c-a5ed-8805a0e309c5.png)
 
-![Screen Shot 2022-05-02 at 8 12 02 PM](https://user-images.githubusercontent.com/100104797/166345416-608f0222-66df-438d-b54c-bb374a4a6456.png)
+![Screen Shot 2022-05-25 at 8 43 44 AM](https://user-images.githubusercontent.com/91819733/170277323-009ec67b-dc5f-41e7-a0ef-49e276401153.png)
 
+![Screen Shot 2022-05-25 at 8 43 31 AM](https://user-images.githubusercontent.com/91819733/170277342-42b674dc-15be-4f24-96b2-6e9013a572a8.png)
 
 Technologies Used: Mongoose | MongoDB | Express | Ejs | NodeJS | CSS
 
